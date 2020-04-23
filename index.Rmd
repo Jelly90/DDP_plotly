@@ -2,13 +2,16 @@
 title: "Plotly Presentation"
 author: "Jelena Erdmann"
 date: "4/23/2020"
-output: ioslides_presentation
+output:   ioslides_presentation
 ---
-
-
-## First Slide
 
 
 ## Plotly
 
+```{r, message = FALSE, warning = FALSE, echo = FALSE}
+library(plotly)
+
+plot_ly(mtcars, x = ~wt, y = ~mpg, type = "scatter",
+color = ~factor(cyl), size = ~hp)
+```
 
